@@ -56,11 +56,11 @@ include = [
   "https://nodemailer.com/*",
   "https://greasyfork.org/*/code",
   "https://docs.docker.com/*",
-  "https://developers.weixin.qq.com/miniprogram/*"
+  "https://developers.weixin.qq.com/miniprogram/*",
 ]
 run-at = "document-idle"
 resource = "font_css https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css"
-grant = [ "GM_addStyle", "GM_getResourceText" ]
+grant = ["GM_addStyle", "GM_getResourceText"]
 
 [github]
 homepage = "https://github.com/arylo-scripts/monkey-set-fira-code-development-websites"

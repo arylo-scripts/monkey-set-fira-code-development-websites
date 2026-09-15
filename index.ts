@@ -1,16 +1,9 @@
 import { GM_addStyle, GM_getResourceText } from '@arylo-scripts/gm-polyfill'
 import templateCss from './styles/template.css'
 
-const DEFAULT_PARENT_SELECTORS = [
-  ':not(li) > a',
-  ':not(h1):not(h2):not(h3):not(h4):not(h5) >',
-]
+const DEFAULT_PARENT_SELECTORS = [':not(li) > a', ':not(h1):not(h2):not(h3):not(h4):not(h5) >']
 
-const DEFAULT_CODE_SELECTORS = [
-  'code',
-  'code *',
-  'pre:not(:has(code))',
-]
+const DEFAULT_CODE_SELECTORS = ['code', 'code *', 'pre:not(:has(code))']
 
 function parseSelectors(selectors: string[], parentSelectors: string[]) {
   const realSelectors = selectors.reduce<string[]>((list, s) => {
@@ -27,8 +20,10 @@ function parseFontString(selectors: string[]) {
 }
 
 setTimeout(async () => {
-  const fontCssContent = (await GM_getResourceText('font_css'))
-    .replace(/(\burl\(["'])/g, '$1https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/')
+  const fontCssContent = (await GM_getResourceText('font_css')).replace(
+    /(\burl\(["'])/g,
+    '$1https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/',
+  )
   GM_addStyle(fontCssContent)
 
   const codeSelectors = DEFAULT_CODE_SELECTORS
@@ -44,4 +39,4 @@ setTimeout(async () => {
       break
   }
   GM_addStyle(parseFontString(selectors))
-}, 25);
+}, 25)

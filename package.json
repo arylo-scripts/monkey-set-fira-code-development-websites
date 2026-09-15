@@ -3,12 +3,28 @@
   "version": "1.0.0",
   "private": true,
   "description": "Set Fira Code as the code font in development websites.",
+  "homepage": "https://github.com/arylo-scripts/monkey-set-fira-code-development-websites#readme",
+  "bugs": {
+    "url": "https://github.com/arylo-scripts/monkey-set-fira-code-development-websites/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arylo-scripts/monkey-set-fira-code-development-websites.git"
+  },
+  "license": "MIT",
   "main": "index.ts",
   "types": "index.ts",
   "scripts": {
     "build": "monkey-build",
     "clean": "rimraf dist",
-    "lint": "tsc --noEmit"
+    "fix": "concurrently -m 1 --timings npm:fix:*",
+    "fix:formatter": "oxfmt",
+    "fix:package": "sort-package-json",
+    "lint": "concurrently -m 1 --timings npm:lint:*",
+    "lint:formatter": "oxfmt --check",
+    "lint:oxlint": "oxlint",
+    "lint:package": "sort-package-json --check",
+    "lint:type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@arylo-scripts/gm-polyfill": "^1.1.0"
@@ -16,20 +32,15 @@
   "devDependencies": {
     "@arylo-scripts/monkey-build": "^1.0.1",
     "@arylo-scripts/tsconfig": "^1.0.0",
+    "concurrently": "^8.2.2",
+    "oxfmt": "^0.35.0",
+    "oxlint": "^1.58.0",
     "rimraf": "^6.1.3",
+    "sort-package-json": "^4.0.0",
     "typescript": "~5.9.3"
   },
+  "packageManager": "npm@11.6.2",
   "engines": {
     "node": "24.12.0"
-  },
-  "packageManager": "npm@11.6.2",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/arylo-scripts/monkey-set-fira-code-development-websites.git"
-  },
-  "homepage": "https://github.com/arylo-scripts/monkey-set-fira-code-development-websites#readme",
-  "bugs": {
-    "url": "https://github.com/arylo-scripts/monkey-set-fira-code-development-websites/issues"
-  },
-  "license": "MIT"
+  }
 }
