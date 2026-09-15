@@ -59,16 +59,7 @@
 
 ## 兼容性
 
-|              |TamperMonkey|ViolentMonkey|Userscripts |
-|--            |--          |--           |--          |
-|Chrome        |![][pass]   |![][pass]    |            |
-|Firefox       |![][unknown]|![][unknown] |            |
-|Safari        |![][pass]   |             |![][unknown]|
-|Safari(iOS)   |![][unknown]|             |![][unknown]|
-|Edge(Chromium)|![][unknown]|![][unknown] |            |
-
-[pass]: https://img.shields.io/badge/-pass-green.svg?&logoColor=000&style=for-the-badge&cacheSeconds=7200
-[unknown]: https://img.shields.io/badge/-unknown-silver.svg?&logoColor=000&style=for-the-badge&cacheSeconds=7200
+目前仅确认在 Windows 和 macOS 的 TamperMonkey 上可以正常使用。
 
 ## 开源证书
 

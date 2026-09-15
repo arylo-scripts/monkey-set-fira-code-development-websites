@@ -59,16 +59,7 @@ Unified use of `Fira Code` as the code font to enhance developers' awareness of 
 
 ## Compatibility
 
-|              |TamperMonkey|ViolentMonkey|Userscripts |
-|--            |--          |--           |--          |
-|Chrome        |![][pass]   |![][pass]    |            |
-|Firefox       |![][unknown]|![][unknown] |            |
-|Safari        |![][pass]   |             |![][unknown]|
-|Safari(iOS)   |![][unknown]|             |![][unknown]|
-|Edge(Chromium)|![][unknown]|![][unknown] |            |
-
-[pass]: https://img.shields.io/badge/-pass-green.svg?&logoColor=000&style=for-the-badge&cacheSeconds=7200
-[unknown]: https://img.shields.io/badge/-unknown-silver.svg?&logoColor=000&style=for-the-badge&cacheSeconds=7200
+Confirmed working only on Tampermonkey for Windows and macOS.
 
 ## License
 
