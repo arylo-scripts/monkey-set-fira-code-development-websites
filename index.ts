@@ -1,4 +1,4 @@
-import { GM_addStyle, GM_getResourceText } from '@scripts/gm-polyfill'
+import { GM_addStyle, GM_getResourceText } from '@arylo-scripts/gm-polyfill'
 import templateCss from './styles/template.css'
 
 const DEFAULT_PARENT_SELECTORS = [

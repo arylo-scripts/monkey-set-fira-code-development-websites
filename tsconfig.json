@@ -1,14 +1,15 @@
 {
-  "extends": "../../../tsconfig.json",
+  "extends": "@arylo-scripts/tsconfig/base.json",
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "./dist",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true
+    "noEmit": true
   },
   "include": [
     "./**/*.ts",
     "./**/*.d.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
   ]
 }
